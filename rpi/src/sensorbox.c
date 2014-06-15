@@ -1563,6 +1563,7 @@ static int sensorbox_generate_network_interfaces(sensorbox_t* box)
 
         if (json_streq(box->config, "wifi.enable", "yes")) {
                 fprintf(fp, 
+                        "auto wlan0\n"
                         "iface wlan0 inet dhcp\n"
                         "      wpa-ssid \"%s\"\n"
                         "      wpa-psk \"%s\"\n\n",
